@@ -477,7 +477,7 @@ def page_settings():
     header("Settings", "Connect Gemini and manage your data.")
     with st.container(border=True):
         st.session_state.api_key = st.text_input("Gemini API key", st.session_state.api_key, type="password", help="Stored only for this session.")
-        models = ["gemini-2.0-flash", "gemini-2.5-flash", "gemini-1.5-flash"]
+        models = ["gemini-2.0-flash", "gemini-2.8-flash", "gemini-1.5-flash"]
         st.session_state.model = st.selectbox("Model", models, index=models.index(st.session_state.model) if st.session_state.model in models else 0)
         st.markdown(badge("Key detected", "good") if get_key() else badge("No key. Sample data only", "warn"), unsafe_allow_html=True)
         if st.button("Reset to sample data"):
